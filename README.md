@@ -10,3 +10,11 @@ For details about the navigator see the upstream project under https://github.co
 ## Build
 
     docker build .
+
+## License
+
+MIT License, for details see [LICENSE.md](./LICENSE.md).
+
+## Author
+
+Frédéric Gierlinger
