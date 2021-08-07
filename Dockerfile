@@ -1,8 +1,7 @@
 FROM node:slim AS builder
 
-RUN apt update && apt -y install git && apt clean
-RUN git clone https://github.com/mitre-attack/attack-navigator/
 WORKDIR /attack-navigator/nav-app
+COPY ./attack-navigator/nav-app .
 RUN npm install && npm run build
 
 FROM nginx:stable-alpine
