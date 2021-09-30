@@ -7,7 +7,7 @@ For details about the navigator see the upstream project under https://github.co
 ## Run
 
     docker run -d -p 8080:80 fgierlinger/mitre-attack-navigator:latest
-    
+
 ## Build
 
     docker build .
