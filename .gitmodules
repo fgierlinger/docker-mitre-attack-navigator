@@ -1,3 +1,6 @@
 [submodule "attack-navigator"]
 	path = attack-navigator
 	url = https://github.com/mitre-attack/attack-navigator/
+[submodule "cti"]
+	path = cti
+	url = https://github.com/mitre/cti
