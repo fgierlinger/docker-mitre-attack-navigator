@@ -4,9 +4,11 @@ on:
   push:
     branches: [main]
     tags: ["v*"]
+  pull_request:
+    branches: [main]
 
 jobs:
-   build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,7 +24,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       - name: Build tag
-        if: github.event_name == 'push'
+        if: github.event_name != 'pull_request'
         uses: docker/build-push-action@v2
         with:
           push: true
