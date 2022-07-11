@@ -21,3 +21,9 @@ jobs:
         uses: commitizen-tools/commitizen-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: ${{ github.workspace }}-CHANGELOG.txt
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
